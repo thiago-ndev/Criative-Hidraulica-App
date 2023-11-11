@@ -1,13 +1,7 @@
-
-console.log(1)
 let btnMenu = document.getElementById('btn-menu')
 let menu = document.getElementById('menu-mobile')
 let overlay = document.getElementById('overlay-menu')
 let btnEnviar = document.querySelector(".btn-enviar")
-let inputNome = document.getElementById('1')
-let inputEmail = document.getElementById('2')
-let inputNumero = document.getElementById('3')
-let inputServico = document.getElementById('4')
 let portifolio = document.querySelector(".portifolio")
 const img = document.querySelector(".img-port")
 
@@ -23,17 +17,68 @@ overlay.addEventListener('click', ()=>{
     menu.classList.remove('abrir-menu')
 })
 
-btnEnviar.addEventListener('click', function(e){
+document.getElementById('form').addEventListener('submit', function (e){
     e.preventDefault();
-    const nome = inputNome.value
-    const email = inputEmail.value
-    const numero = inputNumero.value
-    const servico = inputServico.value
 
-    window.alert(`Obrigado ${nome} sua solicitação foi recebida.`)
+    if (validaCampos()){
+        Swal.fire({
+          title: "Solicitação Enviada",
+          position: "center",
+          showConfirmButton: false,
+          background: '#dee2e6',
+          icon: "success",
+          timer: 2000
+        });
+        setTimeout(()=>{
+            this.submit();
+        },1700)
+    }
+});
 
-})
+function validaCampos(){
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const numero = document.getElementById('phone').value;
+    const service = document.getElementById('service').value;
+    const problem = document.getElementById('problem').value;
 
+    var regexNome = /^[a-zA-Z\u00C0-\u00FF\s]+$/;
+    var regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var regexNumero = /^\d+$/;
+
+    if (!nome || !email || !numero || !service || !problem) {
+        exibirMensagemErro('Por favor, preencha todos os campos.');
+        return false;
+    }
+
+    if (!regexNome.test(nome)) {
+        exibirMensagemErro('Nome contém caracteres inválidos.');
+        return false;
+    }
+
+    if (!regexEmail.test(email)) {
+        exibirMensagemErro('Formato de email inválido.');
+        return false;
+    }
+
+    if (!regexNumero.test(numero)) {
+        exibirMensagemErro('Número de telefone deve conter apenas dígitos.');
+        return false;
+    }
+
+    return true;
+}
+
+function exibirMensagemErro(mensagem) {
+    Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: mensagem,
+        showConfirmButton: false,
+        timer: 1500,
+        background: '#dee2e6',
+    });
+}
 
 
 const controls = document.querySelectorAll('.control');

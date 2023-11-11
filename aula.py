@@ -7,10 +7,10 @@ def converter_moeda(qtd: float, cot: float):
     return valor
 
 
-E = float(input("Digite a quantia em Euros: "))
-C = float(input("Digite a Cotação: "))
+e = float(input("digite a quantia em euros: "))
+c = float(input("digite a cotação: "))
 
-print("O valor em Reais é: ", converter_moeda(E, C))
+print("o valor em reais é: ", converter_moeda(e, c))
 
 
 def fib(n: int):

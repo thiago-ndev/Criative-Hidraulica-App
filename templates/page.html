@@ -105,7 +105,7 @@
         <div class="interface">
             <h2 class="titulo">NOSSOS <span>SERVIÇOS.</span></h2>
                 <div class="flex">
-                    <div class="especialidades-box" style="background-image: url(/templates/static/asset/img/equipe.jpg);">
+                    <div class="especialidades-box" style="background-image: url(/templates/static/asset/img/equipe.jpg); background-size: cover">
                         <i class="bi bi-gear"></i>
                         <h3> Manutenção </h3>
                         <p>Profissionais Qualificados: Nossa equipe é composta por
@@ -113,37 +113,37 @@
                     </div>
 
 
-                    <div class="especialidades-box" style="background-image: url(/templates/static/asset/img/model2.jpg);">
+                    <div class="especialidades-box" style="background-image: url(/templates/static/asset/img/tubulacao-com-torneiras.jpg); background-size: cover">
                         <i class="bi bi-gear"></i>
                         <h3> Detecção e reparo de vazamentos </h3>
                         <p>Profissionais Qualificados: Nossa equipe é composta por
                             técnicos altamente treinados e experientes.</p>
                         </div>
 
-                    <div class="especialidades-box" style="background-image: url(/templates/static/asset/img/drenos.jpg);">
+                    <div class="especialidades-box" style="background-image: url(/templates/static/asset/img/cisternas.avif); background-size: cover">
+                        <i class="bi bi-gear"></i>
+                        <h3>Manutenção de Cisternas </h3>
+                        <p>Nossa equipe é composta por
+                            técnicos altamente treinados e experientes.</p>
+                        </div>
+
+                    <div class="especialidades-box" style="background-image: url(/templates/static/asset/img/encanamento2.jpg); background-size: cover">
                         <i class="bi bi-gear"></i>
                         <h3> Instalação de drenos </h3>
                         <p>Nossa equipe é composta por
                             técnicos altamente treinados e experientes.</p>
                         </div>
 
-                    <div class="especialidades-box" style="background-image: url(/templates/static/asset/img/drenos.jpg);">
+                    <div class="especialidades-box" style="background-image: url(/templates/static/asset/img/vazamento2.jpg); background-size: cover">
                         <i class="bi bi-gear"></i>
-                        <h3> Instalação de drenos </h3>
+                        <h3> Reparo de Vazamentos </h3>
                         <p>Nossa equipe é composta por
                             técnicos altamente treinados e experientes.</p>
                         </div>
 
-                    <div class="especialidades-box" style="background-image: url(/templates/static/asset/img/drenos.jpg);">
+                    <div class="especialidades-box" style="background-image: url(/templates/static/asset/img/maquina2.jpg); background-size: cover">
                         <i class="bi bi-gear"></i>
-                        <h3> Instalação de drenos </h3>
-                        <p>Nossa equipe é composta por
-                            técnicos altamente treinados e experientes.</p>
-                        </div>
-
-                    <div class="especialidades-box" style="background-image: url(/templates/static/asset/img/drenos.jpg);">
-                        <i class="bi bi-gear"></i>
-                        <h3> Instalação de drenos </h3>
+                        <h3> Limpeza de Esgotos </h3>
                         <p>Nossa equipe é composta por
                             técnicos altamente treinados e experientes.</p>
                         </div>
@@ -205,31 +205,39 @@
     <section class="formulario" id="formulario">
     <div class="interface">
         <h2 class="titulo">FALE <span>COMIGO.</span></h2>
-        <form method="post" action="" id="form">
+        <form method="post" action="https://api.staticforms.xyz/submit" id="form">
+            <input type="hidden" name="accessKey" value="6586223c-5ed9-4e07-8a82-9132b562a94b">
+            <input type="text" name="honeypot" style="display: none;"> <!-- Optional -->
+            <input type="hidden" name="redirectTo" value="http://localhost:63342/Criative-Hidraulica-App/templates/page.html?_ijt=eqajkbtrum93qu130jl8jn909c&_ij_reload=RELOAD_ON_SAVE">
+
+
             <div class="input-container">
-                <label for="1">Nome: </label>
-                <input type="text" name="" id="1" placeholder="informe seu Nome" style="width: 60%" required>
+                <label for="nome">Nome: </label>
+                <input type="text" name="name" id="nome" placeholder="informe seu Nome" style="width: 60%" required>
             </div>
             <div class="input-container">
-                <label for="2">Email: </label>
-                <input type="text" name="" id="2" placeholder="informe seu email" style="width: 60%"required>
+                <label for="email">Email: </label>
+                <input type="text" name="name" id="email" placeholder="informe seu email" style="width: 60%" required>
+<!--             <div id="errorMessage" class="text-warning" style="height: 20px;padding: 5px;"></div>-->
             </div>
             <div class="input-container">
-                <label for="3">Telefone: </label>
-                <input type="text" name="" id="3" placeholder="informe seu telefone de contato" style="width: 60%">
+                <label for="phone">Telefone: </label>
+                <input type="text" name="phone" id="phone" placeholder="informe seu telefone de contato" style="width: 60%">
             </div>
             <div class="input-container">
-                <label for="4">Serviço: </label>
-                <input type="text" name="" id="4" placeholder="Qual sua solicitação ?" style="width: 60%">
+                <label for="service">Serviço: </label>
+                <input type="text" name="subject" id="service" placeholder="Qual sua solicitação ?" style="width: 60%">
             </div>
             <div class="input-container">
-                <label for="5">Problema: </label>
-                <textarea name="" id="5" placeholder="Conte-nos sobre seu problema" required ></textarea>
+                <label for="problem">Problema: </label>
+                <textarea name="message" id="problem" placeholder="Conte-nos sobre seu problema" required></textarea>
             </div>
+
             <div class="btn-enviar"><input type="submit" value="ENVIAR">
             </div>
         </form>
     </div>
+
 </section>
 
 </main>
@@ -244,16 +252,20 @@
                         <a href="https://www.instagram.com/cri.ativ/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
                         <a href="https://www.facebook.com/Criativehi" target="_blank" ><button><i class="bi bi-facebook"></i></button></a>
                         <a href="https://wa.me/5521967523816?text=I'm%20interested%20in%20your%20car%20for%20sale'" target="_blank"><button><i class="bi bi-whatsapp"></i></button></a>
-                </div>
+                    </div>
             </div>
         </div>
 
         <div class="line-footer">
              <p><i class="bi bi-telephone-fill"></i>(21)96752-3816</p>
             <p><i class="bi bi-geo-alt-fill"></i>Rua Estrela Nova 14, Rio de janeiro, Cascadura</p>
-            <p><i class="bi bi-envelope-fill"></i> <a href="mailto:criativehidraulica@gmail.com">criativehidraulica@gmail.com</a></p>        </div>
+            <p><i class="bi bi-envelope-fill"></i> <a href="mailto:criativehidraulica@gmail.com">criativehidraulica@gmail.com</a></p>
+            <p style="text-align: center">&copy; 2023 Criative Hidráulica. Todos os direitos reservados.</p>
+            <p style="text-align: center"><i class="bi bi-github"></i>  Desenvolvido por <span><a href="https://github.com/thiago-ndev" target="_blank">Thiago Alves</a></span></p>
+        </div>
     </div>
 </footer>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

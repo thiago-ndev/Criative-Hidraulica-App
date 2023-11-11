@@ -433,7 +433,7 @@ form .btn-enviar input[type=submit]{
 /* estilo rodapé */
 footer{
     background-color: rgba(0, 0, 0, 0.68);
-    padding: 50px 4%;
+    padding: 20px 4%;
     box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.42);
 
 }
@@ -446,6 +446,7 @@ footer .flex{
 
 footer .line-footer{
     padding: 15px 0;
+
 }
 
 footer .line-footer p i{
@@ -460,6 +461,13 @@ footer .line-footer p i{
 footer .line-footer p,a{
     color: #fff;
 }
+
+footer .line-footer span a{
+    color: lightskyblue;
+}
+
+
+
 
 @media screen and (max-width: 1020px){
 
