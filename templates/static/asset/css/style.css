@@ -55,6 +55,7 @@ button:hover, form .btn-enviar input:hover{
 /* Estilo geral */
 
 header{
+        background-color: rgba(0, 0, 0, 0.68);
     padding: 80px 4%;
 }
 
@@ -126,6 +127,11 @@ section.topo-do-site h1{
     animation: flutuar 2s ease-in-out infinite alternate;
 }
 
+.topo-do-site .txt-topo-site .btn-contato{
+    gap: 15px;
+}
+
+
 @keyframes flutuar {
     0% {
         top: 0;
@@ -134,7 +140,9 @@ section.topo-do-site h1{
         top: 30px
     }
 }
+
 section.especialidades{
+    background-color: rgba(0, 0, 0, 0.68);
     padding: 40px 4%;
     display: flex;
 }
@@ -219,38 +227,133 @@ section.sobre .flex{
 
 
 section.portifolio{
+    background-color: rgba(0, 0, 0, 0.68);
     padding: 80px 4%;
     box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.42);
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+
 }
 
 section.portifolio .flex{
-    padding-top: 40px;
-    justify-content: space-around;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+
 }
+
+section.portifolio .interface{
+     overflow-x: auto;
+}
+
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 10px;
+  font-size: 20px;
+  line-height: 250px;
+  width: 40px;
+  color: #fff;
+  transition: all 600ms ease-in-out;
+  background: linear-gradient(to left, transparent 0%, black 200%);
+  opacity: 0.1;
+  cursor: pointer;
+  border: none;
+}
+
+
+.arrow-right {
+  right: 0;
+  left: auto;
+  text-align: right;
+  background: linear-gradient(to right, transparent 0%, black 200%);
+}
+
+.arrow-left:hover,
+.arrow-right:hover{
+    opacity: 1.5;
+}
+
+section.portifolio .interface button:hover{
+    transition: 1s;
+    transform: none;
+    box-shadow: none;
+
+
+
+}
+
 
 .img-port{
-    width: 360px;
-    height: 460px;
-    background-size: cover;
-    background-position: 100% 0%;
-    transition: 7s;
-    border-radius: 40px;
-    cursor: pointer;
-    position: relative;
+    width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  transition: all 400ms ease-in-out;
+  opacity: 0.5;
 }
 
-
-.img-port:hover{
-    background-position: 100% 100%;
+.current-item{
+    opacity: 6;
+    border: 3px solid lightskyblue;
 
 }
+section.portifolio .interface::-webkit-scrollbar {
+  display: none;
+}
+
+section.portifolio .interface::-webkit-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.cyan {
+  background: cyan;
+}
+
+.deeppink {
+  background: deeppink;
+}
+
+.turquoise {
+  background: turquoise;
+}
+
+.darkblue {
+  background: darkblue;
+}
+
+.purple {
+  background: purple;
+}
+
+/* This is from w3schools */
+/*
+https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+/* Hide scrollbar for Chrome, Safari and Opera */
+
 
 
 /* section formulario */
 
-.section.formulario{
+section.formulario{
     padding: 80px 4%;
+    border-radius: 5px;
 }
+
+section.formulario .interface{
+    border: #4e555b;
+    background-color: rgba(0, 0, 0, 0.68);
+    border-radius: 15px;
+}
+
+
+
+
 
 form{
     max-width: 500px;
@@ -290,6 +393,33 @@ form .btn-enviar{
 
 }
 
+
+form label {
+    color: #ffffff; /* Cor da fonte para as etiquetas */
+    margin-bottom: 5px; /* Espaço abaixo da etiqueta */
+    font-size: 18px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-container label {
+    color: #ffffff;
+    margin-right: 10px; /* Espaço entre o label e o input */
+    white-space: nowrap; /* Garante que o texto do label não quebre linha */
+    flex-shrink: 0; /* Previne o label de encolher */
+}
+
+.input-container input::placeholder,
+.input-container textarea::placeholder {
+    color: rgba(255, 255, 255, 0.42);
+}
+
+
 form .btn-enviar input[type=submit]{
     width: 120px;
     background-color: lightskyblue;
@@ -302,6 +432,7 @@ form .btn-enviar input[type=submit]{
 
 /* estilo rodapé */
 footer{
+    background-color: rgba(0, 0, 0, 0.68);
     padding: 50px 4%;
     box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.42);
 
@@ -326,7 +457,7 @@ footer .line-footer p i{
     border-top: 2px solid lightskyblue;
 }
 
-footer .line-footer p a{
+footer .line-footer p,a{
     color: #fff;
 }
 
@@ -345,7 +476,7 @@ footer .line-footer p a{
 
 
     section.topo-do-site{
-        padding: 10px 8%;
+        padding: 20px 8%;
     }
 
     .menu-mobile{
@@ -428,6 +559,13 @@ footer .line-footer p a{
         width: 70%;
     }
 
+    .topo-do-site .txt-topo-site{
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+
     section.especialidades{
         padding: 40px 8%;
     }
@@ -440,6 +578,11 @@ footer .line-footer p a{
     .sobre .txt-sobre h2{
         font-size: 34px;
         line-height: 35px;
+        text-align: center;
+    }
+    .sobre .txt-sobre p{
+        font-size: 18px;
+        line-height: 20px;
         text-align: center;
     }
 
@@ -481,6 +624,10 @@ footer .line-footer p a{
 
 @media screen and (min-width: 1021px){
     .menu-mobile{
+        display: none;
+    }
+
+    .btn-abrir-menu{
         display: none;
     }
 }
