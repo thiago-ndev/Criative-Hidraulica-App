@@ -4,6 +4,7 @@ let overlay = document.getElementById('overlay-menu')
 let btnEnviar = document.querySelector(".btn-enviar")
 let portifolio = document.querySelector(".portifolio")
 const img = document.querySelector(".img-port")
+let servicos = document.querySelectorAll(".servicos-box")
 
 btnMenu.addEventListener('click', ()=>{
     menu.classList.add('abrir-menu')
@@ -80,6 +81,17 @@ function exibirMensagemErro(mensagem) {
     });
 }
 
+
+servicos.forEach(card => {
+    card.addEventListener('click', (event)=>{
+        event.preventDefault();
+        const select = document.getElementById('service');
+        var first = document.getElementById('first');
+        var formulario = document.getElementById('formulario');
+        first.textContent = card.title
+        formulario.scrollIntoView({behavior: 'smooth'});
+    })
+})
 
 const controls = document.querySelectorAll('.control');
 let currentItem = 0

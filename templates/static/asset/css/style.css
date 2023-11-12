@@ -51,9 +51,10 @@ button:hover, form .btn-enviar input:hover{
     transition: 1s;
 
 }
+/* Estilo geral daqui pra cima */
 
-/* Estilo geral */
 
+/* Estilo Header */
 header{
         background-color: rgba(0, 0, 0, 0.68);
     padding: 80px 4%;
@@ -141,17 +142,19 @@ section.topo-do-site h1{
     }
 }
 
-section.especialidades{
+/* estilo servicos */
+
+section.servicos{
     background-color: rgba(0, 0, 0, 0.68);
     padding: 40px 4%;
     display: flex;
 }
-section.especialidades .flex{
+section.servicos .flex{
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.especialidades .especialidades-box{
+.servicos .servicos-box{
     max-width: 350px;
     color: #fff;
     padding: 40px;
@@ -160,19 +163,22 @@ section.especialidades .flex{
     border-radius: 20px;
     transition: .2s;
 }
-.especialidades .especialidades-box:hover{
+.servicos .servicos-box:hover{
     transform: scale(1.05);
     box-shadow: 0px 0px 10px rgba(128, 189, 255, 0.58);
 
 }
 
-.especialidades .especialidades-box i{
+.servicos .servicos-box i{
     font-size: 70px;
     color: lightskyblue;
 }
 
-.especialidades .especialidades-box h3{
-        font-size: 28px;
+.servicos .servicos-box h3{
+        border-radius: 5px;
+        background-color: lightskyblue;
+        color: white;
+        font-size: 20px;
         margin: 15px 0;
 
 }
@@ -382,6 +388,18 @@ form input::placeholder{
     max-height: 200px;
 }
 
+form select{
+    background-color: #424242;
+    border: 0;
+    outline: 0;
+    padding: 18px 14px;
+    border-radius: 15px;
+    color: #ffff;
+    font-size: 18px;
+    text-align: center;
+    align-content: center;
+    width: 60%;
+}
 
 form textarea{
     resize: none;
@@ -482,7 +500,7 @@ footer .line-footer span a{
         display: none;
     }
 
-
+    /* Topo do site */
     section.topo-do-site{
         padding: 20px 8%;
     }
@@ -574,10 +592,11 @@ footer .line-footer span a{
     }
 
 
-    section.especialidades{
+    section.servicos{
         padding: 40px 8%;
     }
 
+    /* Sobre */
 
     .sobre .flex{
         flex-direction: column-reverse;
@@ -618,6 +637,12 @@ footer .line-footer span a{
     section.portifolio .flex{
         gap: 60px;
     }
+    form select{
+    font-size: 14px;
+    text-align: center;
+
+
+}
 
     footer .line-footer{
         text-align: center;
@@ -629,7 +654,7 @@ footer .line-footer span a{
 
 }
 
-
+/* Ajuste para quando a tela é maior */
 @media screen and (min-width: 1021px){
     .menu-mobile{
         display: none;
