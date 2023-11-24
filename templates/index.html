@@ -81,7 +81,7 @@
 
 
                     <div class="btn-contato">
-                        <a href="#formulario">
+                        <a href="#formulario" style="text-decoration: none">
                             <button> Entre em contato</button>
                         </a>
 
@@ -105,7 +105,7 @@
         <div class="interface">
             <h2 class="titulo">NOSSOS <span>SERVIÇOS.</span></h2>
                 <div class="flex">
-                    <div title="Manutenção" class="servicos-box"   style="background-image: url(/templates/static/asset/img/equipe.jpg); background-size: cover">
+                    <div title="Manutenção" class="servicos-box" id="s1" style="background-image: url(static/asset/img/equipe.jpg); background-size: cover">
                         <i class="bi bi-gear"></i>
                         <h3> Manutenção </h3>
                         <p>Profissionais Qualificados: Nossa equipe é composta por
@@ -113,35 +113,35 @@
                     </div>
 
 
-                    <div title="Reparo de Vazamentos" class="servicos-box" style="background-image: url(/templates/static/asset/img/tubulacao-com-torneiras.jpg); background-size: cover">
+                    <div title="Reparo de Vazamentos" class="servicos-box" style="background-image: url(static/asset/img/tubulacao-com-torneiras.jpg); background-size: cover;">
                         <i class="bi bi-gear"></i>
                         <h3>Reparo de vazamentos </h3>
                         <p>Profissionais Qualificados: Nossa equipe é composta por
                             técnicos altamente treinados e experientes.</p>
                         </div>
 
-                    <div title="Manutenção de Cisternas" class="servicos-box" style="background-image: url(/templates/static/asset/img/cisternas.avif); background-size: cover">
+                    <div title="Manutenção de Cisternas" class="servicos-box" style="background-image: url(static/asset/img/cisternas.avif); background-size: cover">
                         <i class="bi bi-gear"></i>
                         <h3>Manutenção de Cisternas </h3>
                         <p>Nossa equipe é composta por
                             técnicos altamente treinados e experientes.</p>
                         </div>
 
-                    <div title="Instalação de drenos" class="servicos-box" style="background-image: url(/templates/static/asset/img/encanamento2.jpg); background-size: cover">
+                    <div title="Instalação de drenos" class="servicos-box" style="background-image: url(static/asset/img/encanamento2.jpg); background-size: cover">
                         <i class="bi bi-gear"></i>
                         <h3> Instalação de drenos </h3>
                         <p>Nossa equipe é composta por
                             técnicos altamente treinados e experientes.</p>
                         </div>
 
-                    <div title="Desentupimento" class="servicos-box" style="background-image: url(/templates/static/asset/img/vazamento2.jpg); background-size: cover">
+                    <div title="Desentupimento" class="servicos-box" style="background-image: url(static/asset/img/vazamento2.jpg); background-size: cover">
                         <i class="bi bi-gear"></i>
                         <h3> Desentupimento </h3>
                         <p>Nossa equipe é composta por
                             técnicos altamente treinados e experientes.</p>
                         </div>
 
-                    <div title="Limpeza de Esgotos" class="servicos-box" style="background-image: url(/templates/static/asset/img/maquina2.jpg); background-size: cover">
+                    <div title="Limpeza de Esgotos" class="servicos-box" style="background-image: url(static/asset/img/maquina2.jpg); background-size: cover">
                         <i class="bi bi-gear"></i>
                         <h3> Limpeza de Esgotos </h3>
                         <p>Nossa equipe é composta por
@@ -206,7 +206,7 @@
         <form method="post" action="https://api.staticforms.xyz/submit" id="form">
             <input type="hidden" name="accessKey" value="6586223c-5ed9-4e07-8a82-9132b562a94b">
             <input type="text" name="honeypot" style="display: none;"> <!-- Optional -->
-            <input type="hidden" name="redirectTo" value="http://localhost:63342/Criative-Hidraulica-App/templates/page.html?_ijt=eqajkbtrum93qu130jl8jn909c&_ij_reload=RELOAD_ON_SAVE">
+            <input type="hidden" name="redirectTo" value="https://criative-hidraulica.netlify.app/">
 
 
             <div class="input-container">
@@ -240,7 +240,7 @@
             </div>
             <div class="input-container">
                 <label for="problem">Problema: </label>
-                <textarea name="message" id="problem" placeholder="Conte-nos sobre seu problema" required></textarea>
+                <textarea name="message" id="problem" placeholder="Conte-nos sobre seu problema" required style="width: 60%; height: 100%"></textarea>
             </div>
 
             <div class="btn-enviar"><input type="submit" value="ENVIAR">

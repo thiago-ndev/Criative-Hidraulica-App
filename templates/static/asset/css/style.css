@@ -406,6 +406,7 @@ form textarea{
 }
 
 form .btn-enviar{
+    padding: 15px;
     margin-top: 20px;
     text-align: center;
 
