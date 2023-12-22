@@ -644,6 +644,10 @@ footer .line-footer span a{
 
 
 }
+    .input-container label {
+        margin: 15px;
+        font-size: 14px;
+    }
 
     footer .line-footer{
         text-align: center;
